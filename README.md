@@ -11,7 +11,6 @@ Processsing Autism fMRI data
   * expects subjID to be exported to the environment 
 ```bash
         export subjID=1101
-
         ./preprocess_task_wf.bash
 ```
 
