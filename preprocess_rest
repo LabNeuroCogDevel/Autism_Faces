@@ -1,0 +1,38 @@
+#!/bin/bash
+rootdir='/Volumes/TeraByte1/Autism_Faces'
+set -e
+
+for subjID in 104 105 109 112 113 115 116 119 121 124 129 130 131 135 141 143 144 149 150 156 158 160 163 164 165 166 177 183 184; do
+	
+	echo "---------------------------"${subjID}"----------------------"
+			
+		if [ -d ${rootdir}/${subjID}/rest ]; then
+				
+			#if [ ! -f ${rootdir}/${subjID}/${experi}/${task}/nfswkmt_functional_5.nii.gz ]; then
+				cd ${rootdir}/${subjID}/rest
+					
+				#rm ${rootdir}/${subjID}/rest/*.nii.gz
+				#rm ${rootdir}/${subjID}/rest/*.mat
+				#rm ${rootdir}/${subjID}/rest/*.par
+				#rm ${rootdir}/${subjID}/rest/*.png
+					
+				preprocessFunctional \
+				-startover \
+				-slice_acquisition 'interleaved' \
+				-dicom '*.dcm' \
+				-delete_dicom no \
+				-template_brain 'Tal_3mm' \
+				-mprage_bet ../anatomical/mprage_bet.nii.gz \
+				-warpcoef ../anatomical/mprage_warpcoef.nii.gz \
+				-rescaling_method 100_voxelmean	
+				cd ${rootdir}
+			#fi
+		fi
+			
+		#else 
+			#	echo 'OH NO! Missing '${rootdir}/${subjID}/${exp}/${cond}
+
+done
+	#fi
+#done
+#done
