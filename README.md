@@ -13,5 +13,23 @@ Processsing Autism fMRI data
         ./preprocess_task_wf.bash
 
 TODO:
+=====
+
 preprocess_task_wf.bash will fail if there are directories (needs rm -f)
+
+
+NOTES:
+=====
+
+
+## TMUX
+  tmux new-session -s preproc
+  tmux attatch     -t preproc
+
+  [ctrl+space, pageup]
+  [q]
+
+  [ctrl+space, d]
+
+* this .git/config has LNCD as the author
 
