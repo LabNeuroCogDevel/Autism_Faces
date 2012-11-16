@@ -9,11 +9,11 @@ Processsing Autism fMRI data
 
 * preprocess_task_wf.bash
   * expects subjID to be exported to the environment 
-    ```bash
+```bash
         export subjID=1101
 
         ./preprocess_task_wf.bash
-    ```
+```
 
 TODO:
 -----
