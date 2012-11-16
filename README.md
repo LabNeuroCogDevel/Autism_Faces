@@ -29,11 +29,9 @@ NOTES:
   tmux new-session -s preproc
   tmux attatch     -t preproc
 ````
+#### keys
 
   [ctrl+space, pageup]
   [q]
 
   [ctrl+space, d]
-
-* this .git/config has LNCD as the author
-
